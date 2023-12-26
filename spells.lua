@@ -402,8 +402,16 @@ Dispels.SpellList = {
         [2569] = {},
     -- General
     [0] = {
-        [395938] = true,    -- Necrotic Decay
-        [395946] = true,    -- Putrid Bolt Poison
-        [395950] = true     -- Festeing Burst Poison
+    --     [395938] = true,    -- Necrotic Decay
+    --     [395946] = true,    -- Putrid Bolt Poison
+    --     [395950] = true     -- Festeing Burst Poison
     }
 }
+
+local General = Dispels.SpellList[0]
+
+if (Dispels.isRetail) then
+    General[395938] = true     -- Necrotic Decay
+    General[395946] = true     -- Putrid Bolt Poison
+    General[395950] = true     -- Festeing Burst Poison
+end

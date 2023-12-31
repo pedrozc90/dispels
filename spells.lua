@@ -411,7 +411,9 @@ Dispels.SpellList = {
 local General = Dispels.SpellList[0]
 
 if (Dispels.isRetail) then
+    -- Mithyc Affixes
     General[395938] = true     -- Necrotic Decay
     General[395946] = true     -- Putrid Bolt Poison
     General[395950] = true     -- Festeing Burst Poison
+    General[409472] = true     -- Diseased Spirit
 end

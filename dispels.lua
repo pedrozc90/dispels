@@ -6,7 +6,6 @@ local band = bit.band
 local format = string.format
 local tinsert = table.insert
 local tremove = table.remove
--- local twipe = table.wipe
 
 -- Blizzard
 local GetInstanceInfo = _G.GetInstanceInfo
@@ -65,21 +64,6 @@ function Dispels:PLAYER_ENTERING_WORLD()
         self:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
         self.spells = table.wipe(self.spells)
     end
-
-    -- -- check group status
-    -- if (instanceType == "raid") or (instanceType == "party") then
-    --     if (inInstance) then
-    --         chatType = "INSTANCE_CHAT"
-    --     elseif (inRaid) then
-    --         chatType = "RAID"
-    --     elseif (inGroup) then
-    --         chatType = "PARTY"
-    --     else
-    --         chatType = "SAY"
-    --     end
-    -- else
-    --     chatType = "SAY"
-    -- end
 end
 
 function Dispels:COMBAT_LOG_EVENT_UNFILTERED()
